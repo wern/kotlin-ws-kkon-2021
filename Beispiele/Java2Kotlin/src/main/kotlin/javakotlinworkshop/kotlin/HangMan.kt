@@ -25,7 +25,7 @@ fun main(args: Array<String>) {
                 var treffer = 0
                 var gleich = 0
                 for (pos in wort.indices) {
-                    if (wort[pos].toLowerCase() == eingabe[0].toLowerCase()) {
+                    if (wort[pos].lowercase() == eingabe[0].lowercase()) {
                         treffer += 1
                         anzeige[pos] = wort[pos]
                     }
@@ -38,8 +38,8 @@ fun main(args: Array<String>) {
                     break
                 }
             } else {
-                if (eingabe.toLowerCase() == wort.toLowerCase()) {
-                    println("Cool, richtig gertaen")
+                if (eingabe.lowercase() == wort.lowercase()) {
+                    println("Cool, richtig geraten")
                     break
                 }
             }
@@ -51,7 +51,7 @@ fun main(args: Array<String>) {
         }
         print("Noch ein Spiel (j/n)?")
         val eingabe = readLine().orEmpty()
-        if (eingabe.toLowerCase() == "n") {
+        if (eingabe.lowercase() == "n") {
             spielen = false
         }
     }
